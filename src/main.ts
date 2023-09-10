@@ -2,7 +2,8 @@ import 'zone.js/dist/zone';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { MenuComponent } from './app/components/menu.component'
+import { MenuComponent } from './app/components/menu.component';
+import { Button } from './app/components/button.component';
 
 @Component({
   selector: 'my-app',
@@ -22,3 +23,5 @@ export class App {
 
 bootstrapApplication(App);
 bootstrapApplication(MenuComponent);
+bootstrapApplication(Button);
+

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'menu-component',
   standalone: true,
-  template: '<h2>Vinicius</h2>',
+  template: '<h2>Vinícius</h2>',
   styles: ['h2 { color: blue }']
 })
 
