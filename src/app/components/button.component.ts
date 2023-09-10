@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class Button {
-  @Input() label: string|undefined;
+  @Input() label: string;
   buttonText: string = 'ACESSAR';
   buttonTexts: string[] = ['VENDER', 'COMPRAR'];
   buttonNumber: number = 1;

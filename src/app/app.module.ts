@@ -7,6 +7,7 @@ import { HelloComponent } from './components/hello.component';
 import { MenuComponent } from './components/menu.component';
 import { Button } from './components/button.component';
 import { EntryDataComponent } from './components/entry-data.component';
+import { LinkComponent } from './components/link.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +17,7 @@ import { EntryDataComponent } from './components/entry-data.component';
     MenuComponent,
     Button,
     EntryDataComponent,
+    LinkComponent
   ],
   bootstrap: [AppComponent],
 })
