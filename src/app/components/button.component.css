@@ -1,4 +1,8 @@
 button {
-  background-color: aqua;
-  color: yellow;
+  background-color: rgb(47, 0, 255);
+  color: rgb(252, 252, 250);
+  border-radius: .2rem;
+  margin: .1rem;
+  padding: .2rem;
+  text-transform: uppercase;   
 }
