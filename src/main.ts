@@ -1,27 +1,16 @@
-import 'zone.js/dist/zone';
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { MenuComponent } from './app/components/menu.component';
-import { Button } from './app/components/button.component';
+import './polyfills';
 
-@Component({
-  selector: 'my-app',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
-    <h1>Hello from {{ name }}!</h1>
-    <a target="_blank" href="https://angular.io/start">
-      Learn more about Angular
-    </a>
-    <h3>Teste 2</h3>
-  `,
-})
-export class App {
-  name = 'Angular';
-}
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-bootstrapApplication(App);
-bootstrapApplication(MenuComponent);
-bootstrapApplication(Button);
+import { AppModule } from './app/app.module';
 
+platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
+  // Ensure Angular destroys itself on hot reloads.
+  if ((window as any)['ngRef']) {
+    ((window as any))['ngRef'].destroy();
+  }
+  ((window as any))['ngRef'] = ref;
+
+  // Otherwise, log the boot error
+}).catch(err => console.error(err));

@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'my-button',
-  standalone: true,
   templateUrl: './button.component.html',
-  styleUrls: [ './button.component.css' ]
+  styleUrls: ['./button.component.css'],
 })
-
 export class Button {
-  buttonText: string = 'Acessar';
+  @Input() label: string|undefined;
+  buttonText: string = 'ACESSAR';
+  buttonTexts: string[] = ['VENDER', 'COMPRAR'];
+  buttonNumber: number = 1;
+  buttonObject = {
+    label: 'adicionar ao carrinho',
+  };
+
+  getAlert(num: number) {
+    alert(num);
+  }
 }
