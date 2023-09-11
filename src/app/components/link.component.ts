@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'link-component',
-  // standalone: true,
   templateUrl: './link.component.html',
   styleUrls: ['./link.component.css']
 })
 
-export class LinkComponent{}
+export class LinkComponent{
+  linkedin: string = "https://www.linkedin.com/in/viniciuslps/";
+  github: string = "https://github.com/viniciusleonel";
+}
