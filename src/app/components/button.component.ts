@@ -14,7 +14,7 @@ export class Button {
     label: 'adicionar ao carrinho',
   };
 
-  getAlert(num: number) {
-    alert(num);
+  getAlert(label) {
+    alert(label);
   }
 }
